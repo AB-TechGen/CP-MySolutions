@@ -1,0 +1,10 @@
+Middle of a Linked List
+
+Find the middle node of a linked list
+Return the second middle element if even number of nodes
+
+Input: 0 1 2 3 4
+Output: 2
+
+Input: 0 1 2 3 4 5
+Output: 3
