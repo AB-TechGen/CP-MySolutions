@@ -1,0 +1,21 @@
+You are given two sorted arrays of integers A and B, each of size n, and an integer x. Design an
+algorithm to determine whether there exist two integers x1 and x2 such that:
+• x1 ∈ A
+• x2 ∈ B
+• x1 + x2 = x
+If such a pair exists, the algorithm should print the values of x1 and x2. If no such pair exists, the algorithm should print an appropriate message.
+Test Case 1
+• Array A = [−10, −3, 1, 4, 8]
+• Array B = [−6, −2, 3, 7, 12]
+• Target sum x = −5
+Expected Output: One valid pair is x1 = −3, x2 = −2.
+Test Case 2
+• Array A = [1, 2, 2, 2, 5]
+• Array B = [3, 3, 4, 4, 6]
+• Target sum x = 6
+Expected Output: One valid pair is x1 = 2, x2 = 4 (other correct answers are also possible).
+Test Case 3
+• Array A = [1, 2, 3]
+• Array B = [4, 5, 6]
+• Target sum x = 10
+Expected Output: No valid pair exists
