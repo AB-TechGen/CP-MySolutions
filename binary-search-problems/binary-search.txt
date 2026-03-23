@@ -1,0 +1,23 @@
+binary search cuts the search space in half using a MONOTONIC INPUT
+
+MONOTONIC doesn't necessarily mean sorted array, it just needs to move in one direction
+ex) [True, True, False, False, False] is also MONOTONIC
+
+comes up when the array is not sorted, but you're still trying to minimize or maximize something and you can check if the solution is valid for a given guess
+
+## PSEUDOCODE FOR GREEDY BINARY search
+
+BINARY-SEARCH(arr: List[int], target: int) -> int
+    left, right = 0, len(arr) - 1
+    first_true_index = -1
+
+    while left <= right
+        mid = left + floor((right - left)/2)
+
+        if feasible(mid)
+            first_true_index = mid
+            right = mid - 1
+        else
+            left = mid + 1
+
+    return first_true_index 
