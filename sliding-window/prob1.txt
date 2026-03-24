@@ -1,0 +1,6 @@
+Find the LARGEST SUM among all subarrays of size k, given an array
+
+Input: [1, 2, 3, 7, 4, 1], k=3
+Output: 14
+
+Explanation: 3+7+4 = 14

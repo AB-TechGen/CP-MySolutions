@@ -1,0 +1,24 @@
+Sliding Windows are just a variation of the two-pointer approach
+
+1) The function performs on the entire interval between the two pointers rather than just those two positions
+2) We keep track of the overall result of that window and when we slide the window, we simply manipulate the result to accomodate for the changes made to the window
+3) Time-complexity wise this is much more efficient because we do not calculate overlapping windows between two intervals again and again. Nested loops are avoided
+
+### PSEUDOCODE FOR FIXED SLIDING Windows
+
+SLIDING-WINDOW-FIXED(A, k) ....... // A -> array,    k -> window size
+    // Step 1: Initialize window
+    window = A[1:k] // where both 1, k are inclusive
+    answer = window // initially
+
+    for right = k+1 to A.length
+        left = right - k
+
+        // Step 2: Progress your window forward with each iteration 
+        remove A[left] from window
+        append A[right] to window
+
+        // Step 3: Check if the new window is more optimal than previous windows
+        answer = optimal(answer, window)
+
+    return answer
