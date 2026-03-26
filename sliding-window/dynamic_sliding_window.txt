@@ -1,0 +1,12 @@
+### Dynamic Window PSEUDOCODE
+
+DYNAMIC-SLIDING-WINDOW(input)
+    initialize window, answer
+    left = 0
+    for right = 1 to n
+        append input[right] to window
+        while invalid(window)
+            remove input[left] from window
+            left += 1
+        answer = optimal(anwer, window)
+    return answer
